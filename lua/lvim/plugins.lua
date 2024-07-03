@@ -110,8 +110,8 @@ local core_plugins = {
   },
   { "rafamadriz/friendly-snippets", lazy = true, cond = lvim.builtin.luasnip.sources.friendly_snippets },
   {
-    "folke/neodev.nvim",
-    lazy = true,
+    "folke/lazydev.nvim",
+    ft = "lua",
   },
 
   -- Autopairs
