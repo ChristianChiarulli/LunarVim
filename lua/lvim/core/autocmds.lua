@@ -71,7 +71,11 @@ function M.load_defaults()
       {
         group = "_auto_resize",
         pattern = "*",
-        command = "tabdo wincmd =",
+        command = [[
+          let _auto_resize_current_tab = tabpagenr()
+          tabdo wincmd =
+          execute 'tabnext' _auto_resize_current_tab
+        ]],
       },
     },
     {
